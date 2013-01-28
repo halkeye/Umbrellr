@@ -1,0 +1,42 @@
+CACHE MANIFEST
+# ISErbZXpauNPT2RdS//3lTYcGM8=
+
+CACHE:
+manifest.webapp
+favicon.ico
+build.txt
+.htaccess
+img/icons/mortar-16.png
+img/icons/mortar-48.png
+img/icons/mortar-128.png
+img/Umbrellr.png
+img/.gitignore
+img/glyphicons-halflings.png
+img/noumbrella.jpeg.old
+img/yesumbrella.png.old
+img/yesumbrella.png
+img/glyphicons-halflings-white.png
+img/noumbrella.png
+js/lib/require.js
+js/x-tag/x-tag.js
+js/x-tag/test/jasmine/lib/jasmine-1.2.0/jasmine.css
+js/x-tag/test/jasmine/lib/jasmine-1.2.0/MIT.LICENSE
+js/x-tag/test/jasmine/lib/jasmine-1.2.0/jasmine.js
+js/x-tag/test/jasmine/lib/jasmine-1.2.0/jasmine-html.js
+js/x-tag/test/jasmine/spec/tests-example.js
+js/x-tag/test/jasmine/spec/tests.js
+js/x-tag/test/jasmine/spec/tests-amd.js
+js/x-tag/test/jasmine/index-amd.html
+js/x-tag/test/jasmine/index.html
+js/x-tag/README.md
+js/init.js
+js/app.js
+css/app.css
+css/install-button.css
+index.html
+
+# catch-all for anything else
+NETWORK:
+*
+http://*
+https://*
