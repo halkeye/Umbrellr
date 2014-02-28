@@ -1,50 +1,47 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html data-ng-app="umbrellr">
   <head>
     <meta charset="utf-8">
 
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css">
   </head>
-  <body>
+  <body data-ng-controller="IndexCtrl">
+    <div data-ng-view></div>
 
-    <!-- Write your application here -->
+    <div class="row">
+      <div class="columns">
+        <button data-ng-click="refresh()" id="fetchWeather">Refresh</button>
+        <h1>Do I need an umbrella?</h1>
+      </div>
+    </div>
 
-   <div style="text-align:center; margin-left:auto; margin-right:auto; padding: 5px;">
-       <strong>Do I need an umbrella?</strong> <span class="refreshButton"><button id="fetchWeather">Refresh</button></span>
-       <div class="weatherBox">Right now<br/><div class="resultContainer" id="todayResult">
-               <div class="result initial">
-                   Fetching...
-                </div>
-               &nbsp;
-       </div></div>
-       <div class="weatherBox">Tomorrow<br/><div class="resultContainer" id="tomorrowResult">
-               <div class="result initial">
-                   Fetching...
-                </div>
-               &nbsp;
-       </div></div>
+    <div class="row">
+      <div data-ng-repeat="day in days">
+        <h2 data-ng-show="$index === 0">Right Now</h2>
+        <h2 data-ng-show="$index === 1">Tomorrow</h2>
+        <div data-ng-include="'weather.html'"></div>
+      </div>
+      <div class="locationBar">Your location: lat: {{coords.lat.toFixed(2)}}, long: {{coords.lon.toFixed(2)}}</div>
    </div>
 
-   <div class="locationBar">Your location<div id="locationBox">&nbsp;</div></div>
-
-    <!-- Use this installation button to install locally without going
-         through the marketpace (see app.js) -->
-    <button id="install-btn">Install</button>
-
-    <!-- Using require.js, a module system for javascript, include the
-         js files. This loads "main.js", which in turn can load other
-         files, all handled by require.js:
-         http://requirejs.org/docs/api.html#jsfiles -->
-    <script type="text/javascript"
-            data-main="js/init.js"
-            src="js/lib/require.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type='text/ng-template' id="weather.html"> 
+      <div class="result" ng-show="day.is_raining === null">
+        Fetching...
+      </div>
+      <div class="result" ng-show="day.is_raining === true">
+        <img src="img/yesumbrella.png"/>
+        Yes :/
+      </div>
+      <div class="result" ng-show="day.is_raining === false">
+        <img src="img/noumbrella.png"/>
+        No :)
+      </div>
+    </script>
   </body>
-
-  <script type="text/javascript" src="js/x-tag/x-tag.js" />
 </html>

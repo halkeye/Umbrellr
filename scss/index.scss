@@ -1,0 +1,10 @@
+@import "./bower_components/foundation/scss/normalize.scss";
+@import "./bower_components/foundation/scss/foundation.scss";
+.row {
+  .columns {
+    border: 1px solid black;
+  }
+}
+#fetchWeather {
+  @extend .right;
+}

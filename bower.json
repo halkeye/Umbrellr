@@ -13,5 +13,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "foundation": "~5.1.1",
+    "requirejs": "~2.1.11",
+    "angularjs-geolocation": "~0.1.1"
+  }
 }
