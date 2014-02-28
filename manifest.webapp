@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "name": "Umbrellr",
+  "description": "Will you need your umbrella?",
+  "launch_path": "/",
+  "icons": {
+    "64": "/img/yesumbrella.png"
+  },
+  "developer": {
+    "name": "Lefty",
+    "url": "http://github.com/LeftyBC"
+  },
+  "installs_allowed_from": ["*"],
+  "appcache_path": "/cache.manifest",
+  "default_locale": "en",
+  "permissions": {
+    "geolocation": {
+      "description": "To determine location for localized weather",
+      "access": "read"
+
+    }
+
+  }
+
+}

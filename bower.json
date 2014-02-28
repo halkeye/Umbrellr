@@ -1,0 +1,17 @@
+{
+  "name": "Umbrellr",
+  "version": "0.0.1",
+  "homepage": "https://github.com/halkeye/Umbrellr",
+  "authors": [
+    "Gavin Mogan <gavin@kodekoan.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
